@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{516BD28D-FA1B-4A18-BA27-18C512EC3A59}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AesGcmEncryption", "src\AesGcmEncryption\AesGcmEncryption.csproj", "{1F808BAD-9C20-47CC-817B-A00B576A8C31}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{9518C636-6B42-4AEA-9526-006302376D14}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AesGcmEncryption.Tests", "test\AesGcmEncryption.Tests\AesGcmEncryption.Tests.csproj", "{0D49E8B2-3ECD-4E1B-ABA7-FBDC72FC9712}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1F808BAD-9C20-47CC-817B-A00B576A8C31}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1F808BAD-9C20-47CC-817B-A00B576A8C31}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1F808BAD-9C20-47CC-817B-A00B576A8C31}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1F808BAD-9C20-47CC-817B-A00B576A8C31}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0D49E8B2-3ECD-4E1B-ABA7-FBDC72FC9712}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0D49E8B2-3ECD-4E1B-ABA7-FBDC72FC9712}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0D49E8B2-3ECD-4E1B-ABA7-FBDC72FC9712}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0D49E8B2-3ECD-4E1B-ABA7-FBDC72FC9712}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{1F808BAD-9C20-47CC-817B-A00B576A8C31} = {516BD28D-FA1B-4A18-BA27-18C512EC3A59}
+		{0D49E8B2-3ECD-4E1B-ABA7-FBDC72FC9712} = {9518C636-6B42-4AEA-9526-006302376D14}
+	EndGlobalSection
+EndGlobal
