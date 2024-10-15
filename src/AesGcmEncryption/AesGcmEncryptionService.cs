@@ -16,18 +16,18 @@ public class AesGcmEncryptionService : IAesGcmEncryptionService
     public byte[] Encrypt(byte[] plainText, byte[] key, byte[] nonce, byte[] associatedData)
     {
         var cipherText = new byte[plainText.Length];
-        var tag = new byte[16]; // GCM tag length is always 16 bytes
-
-        using var aes = new AesGcm(key);
+        var tag = new byte[16]; 
+     
+        using var aes = new AesGcm(key, 16);
         aes.Encrypt(nonce, plainText, cipherText, tag, associatedData);
-
-        // Combine cipherText and tag
+    
         var result = new byte[cipherText.Length + tag.Length];
         cipherText.CopyTo(result, 0);
         tag.CopyTo(result, cipherText.Length);
 
         return result;
     }
+
 
     /// <summary>
     /// Decrypts the given ciphertext using AES-GCM with the provided key, nonce, and optional associated data.
@@ -39,14 +39,15 @@ public class AesGcmEncryptionService : IAesGcmEncryptionService
     /// <returns>The decrypted plaintext as a byte array.</returns>
     public byte[] Decrypt(byte[] cipherText, byte[] key, byte[] nonce, byte[] associatedData)
     {
-        var tag = new byte[16]; // GCM tag length is 16 bytes
+        var tag = new byte[16]; 
         var actualCipherText = new byte[cipherText.Length - tag.Length];
+      
         Array.Copy(cipherText, actualCipherText, actualCipherText.Length);
         Array.Copy(cipherText, actualCipherText.Length, tag, 0, tag.Length);
 
         var plainText = new byte[actualCipherText.Length];
-
-        using var aes = new AesGcm(key);
+     
+        using var aes = new AesGcm(key, 16);
         aes.Decrypt(nonce, actualCipherText, tag, plainText, associatedData);
 
         return plainText;
