@@ -1,6 +1,6 @@
 
 # AES-GCM Encryption and Decryption in .NET 8
-[![Build Status](https://github.com/kullaniciadiniz/repo-adi/actions/workflows/ci.yml/badge.svg)](https://github.com/kullaniciadiniz/repo-adi/actions)
+[![Build Status](https://github.com/sametkayikci/AesGcmEncryption/actions/workflows/ci.yml/badge.svg)](https://github.com/sametkayikci/AesGcmEncryption/actions)
 
 
 
